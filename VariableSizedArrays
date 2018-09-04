@@ -1,0 +1,40 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int arraynum;
+    int questions;
+    
+    cin >> arraynum;
+    cin >> questions;
+    
+    int** arrays = new int*[arraynum]();
+    int howMany = 0;
+    
+    for(int i = 0; i < arraynum; i++){
+        int in;
+        cin >> in;
+        int* myArr = new int[in]();
+        
+        for(int j = 0; j < in; j++){
+            cin >> myArr[j];
+        }
+        arrays[howMany] = myArr;
+        howMany++;
+    }
+    
+    //Query
+    for(int i = 0; i < questions; i++){
+        int arr, row;
+        cin >> arr >> row;
+        cout << arrays[arr][row] << endl;
+        
+    }
+    
+    return 0;
+}
