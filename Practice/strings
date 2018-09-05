@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+	// Complete the program
+    string a;
+    string b;
+    
+    cin >> a >> b;
+    
+    int aLen = a.length();
+    int bLen = b.length();
+    
+    string ab = a+b;
+    
+    char a0 = a[0];
+    char b0 = b[0];
+    
+    string aN = a;
+    string bN = b;
+    
+    aN[0] = b0;
+    bN[0] = a0;
+    
+    cout << aLen << " " << bLen << endl;
+    cout << ab << endl;
+    cout << aN << " " << bN;
+    
+    return 0;
+}
